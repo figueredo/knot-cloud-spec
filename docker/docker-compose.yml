@@ -1,0 +1,27 @@
+version: '3.7'
+services:
+  dispatcher:
+    image: octoblu/meshblu-core-dispatcher
+    env_file: './env.d/meshblu-core-dispatcher.env'
+  worker-webhook:
+    image: octoblu/meshblu-core-worker-webhook
+    env_file: './env.d/meshblu-core-worker-webhook.env'
+  protocol-adapter-http:
+    image: octoblu/meshblu-core-protocol-adapter-http
+    env_file: './env.d/meshblu-core-protocol-adapter-http.env'
+    ports:
+      - '3000:80'
+  firehose-socket-io:
+    image: octoblu/meshblu-core-firehose-socket.io
+    env_file: './env.d/meshblu-core-firehose-socket.io.env'
+    ports:
+      - '3080:80'
+  mongo:
+    image: mongo
+    volumes:
+      - 'mongo-data:/data/db'
+  redis:
+    image: redis
+
+volumes:
+  mongo-data:
