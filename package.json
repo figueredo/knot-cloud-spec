@@ -1,0 +1,24 @@
+{
+  "name": "knot-cloud-spec",
+  "version": "0.1.0",
+  "description": "KNoT over Meshblu 2.0",
+  "main": "src/index.js",
+  "author": "KNoT",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/figueredo/knot-cloud-spec.git"
+  },
+  "scripts": {
+    "start": "node src",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "yargs": "^12.0.5"
+  },
+  "devDependencies": {
+    "eslint": "^5.11.1",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.14.0"
+  }
+}
