@@ -16,6 +16,7 @@
   "dependencies": {
     "bluebird": "^3.5.3",
     "lodash": "^4.17.11",
+    "meshblu-firehose-socket.io": "^4.0.2",
     "meshblu-http": "^10.2.0",
     "yargs": "^12.0.5"
   },
